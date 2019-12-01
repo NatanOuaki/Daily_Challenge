@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+//daily challenge
+const array = [
+ {
+   username: "john",
+   team: "red",
+   score: 5,
+   items: ["ball", "book", "pen"]
+ },
+ {
+   username: "becky",
+   team: "blue",
+   score: 10,
+   items: ["tape", "backpack", "pen"]
+ },
+ {
+   username: "susy",
+   team: "red",
+   score: 55,
+   items: ["ball", "eraser", "pen"]
+ },
+ {
+   username: "tyson",
+   team: "green",
+   score: 1,
+   items: ["book", "pen"]
+ },
+];
+
+//1 Create an array using forEach that has all the usernames with a “!” to each of the usernames
+
+const newArr = [];
+array.forEach((i) => {
+   newArr.push(i.username + "!");
+});
+console.log ('forEach', newArr);
+
+
+
+//2 Create an array using for loop that has all the usernames with a “?” to each of the usernames
+
+const newArr2 = [];
+for (i=0; i < array.length; i++){
+   newArr2.push(array[i].username + "?");
+};
+console.log (newArr2);
+
+//3 Filter the array to only include users who are on team: red
+const filterTeam = array.filter(i => {
+  return i.team ==('red');
+});
+console.log(filterTeam);
+
+//4 Find out the total score of all users
+
+const total = array.reduce((score) => {
+  console.log(score);
+  return score;
+});
+console.log(total);
+
+const scoreArr = [];
+array.forEach ((i) => {
+    scoreArr.push (i.score );
+});
+
+console.log(
+  scoreArr.reduce((a, b) => a + b, 0)
+)
+
+</script>
+</html>
