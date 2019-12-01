@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+//daily challenge
+// Exercise: Creating Objects
+// In this exercise, you will use object oriented programming concepts to define and use a custom object in JavaScript.
+// 1.Create the constructor function for a Video object. The function should take in arguments of title (a string),
+// uploader (a string, the person who uploaded it), and seconds (a number, the duration), and it should save them as properties of the object.
+
+const videoObject = function(title, uploader, seconds){
+  this.title = title;
+  this.uploader = uploader;
+  this.duration = seconds;
+  this.watch = function(){
+	console.log(`You watched all ${this.duration} seconds of ${this.title}!`)
+}
+}
+var test = new videoObject("Name","Upload by", 1)
+// 2.Create a method on the Video object called watch(). When that method is called, it should use console.log to output a string like 
+//“You watched all 60 seconds of Otters Holding Hands!”
+test.watch()
+// 3. Instantiate a new Video object and call the watch() method on it.
+var test2 = new videoObject("Name2","Upload by2", 2)
+
+</script>
+</html>
