@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+//Daily Challenge day 3
+
+
+var tab = [5,0,9,1,7,4,2,6,3,8];
+for (i=0; i<tab.length; i++){
+	for (j=0; j<tab.length; j++){
+		if (tab[i]>tab[j]){
+			var c = tab[j]
+			tab[j] = tab [i]
+			tab[i] = c
+		}
+	}
+}
+console.log(tab)
+</script>
+</html>
