@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+//Daily Challenge day 4
+
+
+var str = prompt(' Enter a phrase: ');
+var array = str.split(' ');
+console.log(array);
+​
+var longest= 0;
+var word = '';
+var line = '';  
+var space = '';
+var margen = '';
+​
+function sign(arr) {
+    
+    for (i = 0; i < arr.length; i++){
+            if(arr[i].length > longest){
+                longest = arr[i].length ;
+                    word = arr[i];
+            }
+    } 
+    
+    for (i=0; i < longest + 4; i++) {
+        line += "*";
+    }
+    console.log(line);
+    
+​
+    for (i = 0; i < arr.length; i++){
+        space = longest- arr[i].length;
+ 		margen = "";
+        for (j = 0 ; j < space; j++){
+            margen += " ";
+        }; 
+        console.log('* '+ arr[i] + margen + ' *')   
+    };
+     console.log(line);
+	line = ""; // This is just in case you execute the function again, so the line doesn't keep acumulating.
+​
+      
+}
+sign(array);
+console.log(tab)
+</script>
+</html>
